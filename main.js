@@ -68,17 +68,22 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Form submit
+// Form submit — feedback visual antes de enviar a FormSubmit
 document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = '¡Mensaje enviado! ✓';
-  btn.style.background = '#22c55e';
+  btn.textContent = 'Enviando...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Enviar solicitud →';
-    btn.style.background = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 3500);
 });
+
+// Mostrar mensaje de éxito si volvió desde FormSubmit
+if (new URLSearchParams(window.location.search).get('enviado') === '1') {
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.innerHTML = `
+      <div style="text-align:center; padding: 48px 24px;">
+        <div style="font-size:3rem; margin-bottom:16px;">✓</div>
+        <h3 style="font-family:'Montserrat',sans-serif; color:#1A2B4A; margin-bottom:12px;">¡Mensaje enviado!</h3>
+        <p style="color:#888;">Te responderemos a la brevedad en menos de 24 horas.</p>
+      </div>`;
+  }
+}
