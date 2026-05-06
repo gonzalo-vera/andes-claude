@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andes Construcción — Construimos con experiencia y precisión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-andes">ANDES</span>
+        <span class="logo-construccion">CONSTRUCCIÓN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-cta">Solicitar Cotización</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <img
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80"
+      alt="Proyecto de construcción Andes"
+      class="hero-bg"
+    />
+    <div class="container hero-content">
+      <span class="hero-tag">Más de 20 años en Chile</span>
+      <h1>Construimos con<br /><em>experiencia y precisión</em></h1>
+      <p>Impermeabilización, remodelación y construcción de alto estándar.<br />1.000.000 m² ejecutados a lo largo de todo Chile.</p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#servicios" class="btn btn-ghost">Conocer Servicios</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+        <p>Años de experiencia</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="1000000">0</span>
+        <p>m² ejecutados</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+        <p>Proyectos completados</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+        <p>Clientes satisfechos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lo que hacemos</span>
+        <h2>Nuestros Servicios</h2>
+        <p>Soluciones integrales para cada etapa de tu proyecto</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M14 34c2-4 5-7 10-8s10 1 12 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Impermeabilización</h3>
+          <p>Sistemas de protección hídrica para techos, terrazas, muros y fundaciones. Garantizamos impermeabilidad duradera con materiales certificados.</p>
+          <a href="#contacto" class="service-link">Cotizar →</a>
+        </div>
+        <div class="service-card featured" data-aos>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="20" width="36" height="22" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M4 20L24 6l20 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="18" y="30" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Construcción</h3>
+          <p>Edificación de obras desde cero con altos estándares de calidad. Residencias, locales comerciales e infraestructura industrial.</p>
+          <a href="#contacto" class="service-link">Cotizar →</a>
+          <span class="featured-label">Más solicitado</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 40L20 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M28 12l8 8-18 18-8-2 2-8 16-16z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M36 4l8 8-4 4-8-8 4-4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Remodelación</h3>
+          <p>Transformamos espacios existentes con diseño funcional y materiales de primera. Desde baños y cocinas hasta remodelaciones integrales.</p>
+          <a href="#contacto" class="service-link">Cotizar →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="section por-que" id="nosotros">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Nuestra diferencia</span>
+        <h2>¿Por qué elegirnos?</h2>
+        <p>Comprometidos con la excelencia en cada proyecto</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item" data-aos>
+          <div class="why-icon">✓</div>
+          <h4>Garantía certificada</h4>
+          <p>Todos nuestros trabajos tienen garantía escrita respaldada por póliza de seguros.</p>
+        </div>
+        <div class="why-item" data-aos>
+          <div class="why-icon">◆</div>
+          <h4>Materiales de primera</h4>
+          <p>Trabajamos solo con proveedores certificados y materiales de alta durabilidad.</p>
+        </div>
+        <div class="why-item" data-aos>
+          <div class="why-icon">⬡</div>
+          <h4>Equipo profesional</h4>
+          <p>Ingenieros, arquitectos y maestros con más de 20 años de experiencia comprobada.</p>
+        </div>
+        <div class="why-item" data-aos>
+          <div class="why-icon">≡</div>
+          <h4>Presupuesto transparente</h4>
+          <p>Cotizaciones detalladas sin letra chica. El precio acordado es el precio final.</p>
+        </div>
+        <div class="why-item" data-aos>
+          <div class="why-icon">◷</div>
+          <h4>Cumplimiento de plazos</h4>
+          <p>Metodología de gestión de obra que nos permite cumplir los tiempos comprometidos.</p>
+        </div>
+        <div class="why-item" data-aos>
+          <div class="why-icon">★</div>
+          <h4>Servicio post-obra</h4>
+          <p>Seguimiento y mantención posterior a la entrega para asegurar tu satisfacción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section proyectos" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestro trabajo</span>
+        <h2>Proyectos Destacados</h2>
+        <p>Una muestra de nuestra trayectoria a lo largo de Chile</p>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="impermeabilizacion">Impermeabilización</button>
+        <button class="filter-btn" data-filter="construccion">Construcción</button>
+        <button class="filter-btn" data-filter="remodelacion">Remodelación</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-item" data-category="impermeabilizacion" data-aos>
+          <img src="https://images.unsplash.com/photo-1590412200988-a436970781fa?w=600&q=80" alt="Impermeabilización techo plano" />
+          <div class="project-overlay">
+            <span class="project-cat">Impermeabilización</span>
+            <h4>Edificio Corporativo Las Condes</h4>
+          </div>
+        </div>
+        <div class="project-item large" data-category="construccion" data-aos>
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construcción residencial" />
+          <div class="project-overlay">
+            <span class="project-cat">Construcción</span>
+            <h4>Conjunto Residencial Vitacura</h4>
+          </div>
+        </div>
+        <div class="project-item" data-category="remodelacion" data-aos>
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Remodelación cocina" />
+          <div class="project-overlay">
+            <span class="project-cat">Remodelación</span>
+            <h4>Oficinas Providencia</h4>
+          </div>
+        </div>
+        <div class="project-item" data-category="construccion" data-aos>
+          <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?w=600&q=80" alt="Obra industrial" />
+          <div class="project-overlay">
+            <span class="project-cat">Construcción</span>
+            <h4>Bodega Industrial Pudahuel</h4>
+          </div>
+        </div>
+        <div class="project-item" data-category="impermeabilizacion" data-aos>
+          <img src="https://images.unsplash.com/photo-1601599561213-832382fd07ba?w=600&q=80" alt="Terraza impermeabilizada" />
+          <div class="project-overlay">
+            <span class="project-cat">Impermeabilización</span>
+            <h4>Terraza Hotel Bellavista</h4>
+          </div>
+        </div>
+        <div class="project-item" data-category="remodelacion" data-aos>
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Interior remodelado" />
+          <div class="project-overlay">
+            <span class="project-cat">Remodelación</span>
+            <h4>Vivienda Unifamiliar Ñuñoa</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lo que dicen</span>
+        <h2>Clientes que confían en nosotros</h2>
+      </div>
+      <div class="testimonios-grid">
+        <div class="testimonio-card" data-aos>
+          <div class="quote-mark">"</div>
+          <p>Andes Construcción impermeabilizó toda la cubierta de nuestro edificio. Trabajo impecable, cumplieron los plazos y el equipo fue muy profesional en todo momento.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">MR</div>
+            <div>
+              <strong>Marcela Reyes</strong>
+              <span>Administradora, Edificio Torre Sur</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio-card" data-aos>
+          <div class="quote-mark">"</div>
+          <p>Remodelamos nuestras oficinas con ellos y el resultado superó las expectativas. Diseño moderno, ejecución prolija y precio justo. Los recomiendo sin dudarlo.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">CF</div>
+            <div>
+              <strong>Carlos Fuentes</strong>
+              <span>Gerente General, Grupo Innova</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio-card" data-aos>
+          <div class="quote-mark">"</div>
+          <p>Construyeron nuestra vivienda de cero. Seguimiento constante, materiales de primera calidad y entregaron antes del plazo. Una experiencia realmente tranquilizadora.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">PV</div>
+            <div>
+              <strong>Patricia Vargas</strong>
+              <span>Propietaria, Las Condes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto" id="contacto">
+    <div class="container contacto-inner">
+      <div class="contacto-info">
+        <span class="section-tag">Hablemos</span>
+        <h2>Solicita tu<br />cotización gratis</h2>
+        <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">✉</span>
+            <span>contacto@andesconstruccion.com</span>
+          </li>
+          <li>
+            <span class="contact-icon">✆</span>
+            <span>+56 2 2345 6789</span>
+          </li>
+          <li>
+            <span class="contact-icon">⊕</span>
+            <span>Santiago, Región Metropolitana, Chile</span>
+          </li>
+        </ul>
+        <a href="https://wa.me/56912345678" class="btn btn-whatsapp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+      <form class="contacto-form" id="contactForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="juan@empresa.cl" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="servicio">Tipo de proyecto</label>
+          <select id="servicio" name="servicio" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="impermeabilizacion">Impermeabilización</option>
+            <option value="construccion">Construcción</option>
+            <option value="remodelacion">Remodelación</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Cuéntanos tu proyecto</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Enviar solicitud →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-white">
+          <span class="logo-andes">ANDES</span>
+          <span class="logo-construccion">CONSTRUCCIÓN</span>
+        </a>
+        <p>Más de 20 años construyendo confianza y calidad en Chile.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Impermeabilización</a></li>
+          <li><a href="#servicios">Construcción</a></li>
+          <li><a href="#servicios">Remodelación</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contacto</h5>
+        <p>contacto@andesconstruccion.com</p>
+        <p>+56 2 2345 6789</p>
+        <p>Santiago, Chile</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Andes Construcción. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/56912345678" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
