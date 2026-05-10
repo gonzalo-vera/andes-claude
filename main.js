@@ -1,3 +1,16 @@
+// FormSubmit: URL de agradecimiento en el origen actual (siempre home con ?enviado=1)
+(function initFormSubmitNext() {
+  const nextInput = document.querySelector('#contactForm input[data-form-next]');
+  if (!nextInput) return;
+  try {
+    const u = new URL(window.location.origin);
+    u.searchParams.set('enviado', '1');
+    nextInput.value = u.toString();
+  } catch {
+    nextInput.value = `${window.location.origin}/?enviado=1`;
+  }
+})();
+
 // Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
