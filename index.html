@@ -4,17 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andes Construcción — Construimos con experiencia y precisión</title>
+  <!-- Google Tag Manager: reemplaza GTM-XXXXXXX por tu ID real (GA4 y Clarity vía GTM o tags adicionales). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l !== "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+      title="Google Tag Manager"
+    ></iframe>
+  </noscript>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">
+      <a href="index.html#inicio" class="logo">
         <span class="logo-andes">ANDES</span>
         <span class="logo-construccion">CONSTRUCCIÓN</span>
       </a>
@@ -52,6 +75,37 @@
     <div class="hero-scroll">
       <span>Scroll</span>
       <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar" aria-labelledby="trust-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Respaldo B2B</span>
+        <h2 id="trust-heading">Mandantes que exigen estándar de obra</h2>
+        <p>Administración de edificios, retail, hotelería e industria. Operamos con planificación, informe de avance y cierre documentado.</p>
+      </div>
+    </div>
+    <div class="trust-bar-viewport">
+      <div class="trust-track">
+        <div class="trust-logos">
+          <img src="assets/logos/cliente-01.svg" alt="Logo cliente corporativo asociado" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-02.svg" alt="Logo cliente retail asociado" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-03.svg" alt="Logo cliente inmobiliario asociado" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-04.svg" alt="Logo cliente institucional asociado" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-05.svg" alt="Logo cliente industrial asociado" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-06.svg" alt="Logo cliente servicios asociado" width="160" height="40" loading="lazy" decoding="async" />
+        </div>
+        <div class="trust-logos" aria-hidden="true">
+          <img src="assets/logos/cliente-01.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-02.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-03.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-04.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-05.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+          <img src="assets/logos/cliente-06.svg" alt="" width="160" height="40" loading="lazy" decoding="async" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -123,6 +177,71 @@
           <p>Transformamos espacios existentes con diseño funcional y materiales de primera. Desde baños y cocinas hasta remodelaciones integrales.</p>
           <a href="#contacto" class="service-link">Cotizar →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS DE ÉXITO B2B -->
+  <section class="section casos-exitos" id="casos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Casos de éxito</span>
+        <h2>Resultados medibles en terreno</h2>
+        <p>Ingeniería aplicada a edificios en operación: menos filtraciones, ventanas de intervención acotadas y entregables listos para directorio o comité.</p>
+      </div>
+      <div class="testimonios-grid">
+        <article class="testimonio-card" data-aos>
+          <span class="caso-meta">Impermeabilización · Las Condes</span>
+          <div class="caso-metric">12.400 m² de cubierta</div>
+          <p>Intervención en edificio corporativo en uso: diagnóstico por tramos, priorización de zonas críticas y reaprotección con control de humedades en estacionamientos.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">EC</div>
+            <div>
+              <strong>Edificio Corporativo Las Condes</strong>
+              <span>Mandante · administración y operaciones</span>
+            </div>
+          </div>
+          <a href="#contacto" class="caso-cta">Replicar en mi edificio →</a>
+        </article>
+        <article class="testimonio-card" data-aos>
+          <span class="caso-meta">Construcción · Vitacura</span>
+          <div class="caso-metric">Entrega por etapas</div>
+          <p>Conjunto residencial con coordinación de proveedores críticos, pruebas de estanqueidad en cubiertas y protocolo de recepción por lote para reducir observaciones.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">CR</div>
+            <div>
+              <strong>Conjunto Residencial Vitacura</strong>
+              <span>Inmobiliaria · proyecto habitacional</span>
+            </div>
+          </div>
+          <a href="#contacto" class="caso-cta">Coordinar visita técnica →</a>
+        </article>
+        <article class="testimonio-card" data-aos>
+          <span class="caso-meta">Remodelación · Providencia</span>
+          <div class="caso-metric">Obra en horario hábil</div>
+          <p>Oficinas en edificio mixto: contención de polvo y ruido, rutas de evacuación siempre liberadas y entrega con planos as-built de instalaciones tocadas.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">OP</div>
+            <div>
+              <strong>Oficinas Providencia</strong>
+              <span>Empresa de servicios · facility</span>
+            </div>
+          </div>
+          <a href="#contacto" class="caso-cta">Planificar intervención →</a>
+        </article>
+        <article class="testimonio-card" data-aos>
+          <span class="caso-meta">Industrial · Pudahuel</span>
+          <div class="caso-metric">Continuidad operacional</div>
+          <p>Bodega con tráfico pesado: refuerzo de losa y tratamiento de juntas con ventanas nocturnas, registro fotográfico y check-list de seguridad por turno.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">BP</div>
+            <div>
+              <strong>Bodega Industrial Pudahuel</strong>
+              <span>Operaciones logísticas</span>
+            </div>
+          </div>
+          <a href="#contacto" class="caso-cta">Evaluar mi planta →</a>
+        </article>
       </div>
     </div>
   </section>
@@ -351,7 +470,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="logo logo-white">
+        <a href="index.html#inicio" class="logo logo-white">
           <span class="logo-andes">ANDES</span>
           <span class="logo-construccion">CONSTRUCCIÓN</span>
         </a>
