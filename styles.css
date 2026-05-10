@@ -930,6 +930,78 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 /* =============================================
+   PÁGINAS DE SERVICIO (plantilla multi-página)
+   ============================================= */
+.servicio-intro {
+  padding: 128px 0 56px;
+  background: linear-gradient(
+    165deg,
+    var(--navy-dark) 0%,
+    var(--navy) 50%,
+    var(--corp-blue) 100%
+  );
+}
+.servicio-intro .section-header {
+  text-align: left;
+  margin-bottom: 28px;
+  max-width: 720px;
+}
+.servicio-intro .hero-actions {
+  margin-top: 8px;
+}
+.servicio-body h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.servicio-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 28px 0 12px;
+}
+.servicio-body p,
+.servicio-body li {
+  font-size: 0.98rem;
+  color: var(--gray-700);
+  line-height: 1.75;
+}
+.servicio-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 12px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.servicio-cta {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+.servicio-cta .btn-ghost {
+  border-color: rgba(26, 43, 74, 0.35);
+  color: var(--navy);
+}
+.servicio-cta .btn-ghost:hover {
+  background: rgba(26, 43, 74, 0.06);
+  border-color: var(--navy);
+}
+.servicio-related {
+  background: var(--gray-100);
+}
+.servicio-related .services-grid {
+  margin-top: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
@@ -940,6 +1012,9 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 @media (max-width: 768px) {
+  .servicio-related .services-grid {
+    grid-template-columns: 1fr;
+  }
   .section { padding: 72px 0; }
   .nav-links, .btn-cta { display: none; }
   .nav-toggle { display: flex; }
