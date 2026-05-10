@@ -7,10 +7,10 @@ window.addEventListener('scroll', () => {
 // Mobile menu
 const toggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+toggle?.addEventListener('click', () => {
+  navLinks?.classList.toggle('open');
 });
-navLinks.querySelectorAll('a').forEach(a => {
+navLinks?.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
