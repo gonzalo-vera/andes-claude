@@ -1,14 +1,8 @@
-// FormSubmit: URL de agradecimiento en el origen actual (siempre home con ?enviado=1)
+// FormSubmit: apunta a gracias.html en el mismo origen
 (function initFormSubmitNext() {
   const nextInput = document.querySelector('#contactForm input[data-form-next]');
   if (!nextInput) return;
-  try {
-    const u = new URL(window.location.origin);
-    u.searchParams.set('enviado', '1');
-    nextInput.value = u.toString();
-  } catch {
-    nextInput.value = `${window.location.origin}/?enviado=1`;
-  }
+  nextInput.value = `${window.location.origin}/gracias`;
 })();
 
 // Navbar scroll
@@ -17,14 +11,42 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Mobile menu
+// Mobile menu — toggle hamburger ↔ X
 const toggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
 toggle?.addEventListener('click', () => {
-  navLinks?.classList.toggle('open');
+  const isOpen = navLinks?.classList.toggle('open');
+  toggle.classList.toggle('open', isOpen);
+  toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Menú');
 });
 navLinks?.querySelectorAll('a').forEach((a) => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    toggle?.classList.remove('open');
+    toggle?.setAttribute('aria-label', 'Menú');
+  });
+});
+
+// GTM helpers
+function gtmPush(data) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(data);
+}
+
+// Track WhatsApp clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach((el) => {
+  const source = el.classList.contains('whatsapp-fab') ? 'fab' : 'contact_section';
+  el.addEventListener('click', () => gtmPush({ event: 'whatsapp_click', source }));
+});
+
+// Track phone clicks
+document.querySelectorAll('a[href^="tel:"]').forEach((el) => {
+  el.addEventListener('click', () => gtmPush({ event: 'phone_click' }));
+});
+
+// Track email clicks
+document.querySelectorAll('a[href^="mailto:"]').forEach((el) => {
+  el.addEventListener('click', () => gtmPush({ event: 'email_click' }));
 });
 
 // Counter animation
@@ -78,25 +100,28 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
       const show = filter === 'all' || item.dataset.category === filter;
       item.classList.toggle('hidden', !show);
     });
+    gtmPush({ event: 'project_filter_click', filter_value: filter });
   });
 });
 
-// Form submit — feedback visual antes de enviar a FormSubmit
+// Form submit — GTM event + visual feedback
 document.getElementById('contactForm')?.addEventListener('submit', (e) => {
   const btn = e.target.querySelector('button[type="submit"]');
+  const servicio = e.target.querySelector('[name="servicio"]')?.value || '';
   btn.textContent = 'Enviando...';
   btn.disabled = true;
+  gtmPush({ event: 'form_submitted', service: servicio });
 });
 
-// Mostrar mensaje de éxito si volvió desde FormSubmit
-if (new URLSearchParams(window.location.search).get('enviado') === '1') {
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.innerHTML = `
-      <div style="text-align:center; padding: 48px 24px;">
-        <div style="font-size:3rem; margin-bottom:16px;">✓</div>
-        <h3 style="font-family:'Montserrat',sans-serif; color:#1A2B4A; margin-bottom:12px;">¡Mensaje enviado!</h3>
-        <p style="color:#888;">Te responderemos a la brevedad en menos de 24 horas.</p>
-      </div>`;
-  }
-}
+// Cookie banner
+(function initCookieBanner() {
+  if (localStorage.getItem('cookies_accepted')) return;
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  banner.style.display = 'flex';
+  document.getElementById('cookieAccept')?.addEventListener('click', () => {
+    localStorage.setItem('cookies_accepted', '1');
+    banner.style.display = 'none';
+    gtmPush({ event: 'cookie_consent_granted' });
+  });
+})();

@@ -1058,3 +1058,52 @@ textarea { resize: vertical; min-height: 120px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: 1fr; }
 }
+
+/* SCROLL MARGIN — compensa navbar fijo en anchor links */
+section[id] { scroll-margin-top: 80px; }
+
+/* SERVICE CARD — cursor pointer en hover */
+.service-card { cursor: pointer; }
+
+/* HAMBURGER → X animation */
+.nav-toggle span { transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* COOKIE BANNER */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 16px 24px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.cookie-banner p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  flex: 1;
+  min-width: 240px;
+}
+.cookie-banner a { color: rgba(255,255,255,0.9); text-decoration: underline; }
+.cookie-accept {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+.cookie-accept:hover { background: var(--orange-dark); }

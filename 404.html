@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Página no encontrada — Andes Construcción</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .error-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--corp-blue) 100%);
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .error-box { max-width: 520px; color: var(--white); }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 20vw, 9rem);
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .error-box h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .error-box p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <section class="error-hero">
+    <div class="error-box">
+      <div class="error-code">404</div>
+      <h1>Esta página no existe</h1>
+      <p>La URL que buscas no está disponible. Puede que haya sido movida o que el enlace tenga un error.</p>
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary">Volver al inicio</a>
+        <a href="/#contacto" class="btn btn-ghost">Contactar</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
