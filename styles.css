@@ -220,9 +220,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   z-index: 1;
   background: linear-gradient(
     135deg,
-    rgba(15,27,48,0.9) 0%,
-    rgba(22,77,127,0.55) 45%,
-    rgba(26,43,74,0.4) 100%
+    rgba(10,18,33,0.96) 0%,
+    rgba(15,27,48,0.85) 50%,
+    rgba(26,43,74,0.75) 100%
   );
 }
 .hero-content {
@@ -851,10 +851,10 @@ textarea { resize: vertical; min-height: 120px; }
 }
 .trust-logos img {
   width: auto;
-  height: 36px;
+  height: 48px;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.82;
+  opacity: 0.75;
   transition: opacity var(--transition);
 }
 .trust-logos img:hover {
