@@ -868,13 +868,14 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 /* =============================================
-   TRUST BAR — grid estático de logos
+   TRUST BAR — carrusel infinito
    ============================================= */
 .trust-bar {
   background: var(--white);
   border-top: 1px solid rgba(26, 43, 74, 0.08);
   border-bottom: 1px solid rgba(26, 43, 74, 0.08);
   padding: 60px 0;
+  overflow: hidden;
 }
 .trust-intro {
   text-align: center;
@@ -894,25 +895,39 @@ textarea { resize: vertical; min-height: 120px; }
   max-width: 480px;
   margin: 0 auto;
 }
-.trust-logos-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 28px 40px;
-  align-items: center;
-  justify-items: center;
+@keyframes trustScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
-.trust-logos-grid img {
-  width: 100%;
-  max-width: 120px;
+.trust-carousel {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.trust-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  animation: trustScroll 28s linear infinite;
+}
+.trust-track:hover {
+  animation-play-state: paused;
+}
+.trust-track img {
   height: 44px;
-  object-fit: contain;
+  width: auto;
+  flex-shrink: 0;
   filter: grayscale(100%);
-  opacity: 0.5;
+  opacity: 0.45;
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
-.trust-logos-grid img:hover {
-  opacity: 0.85;
+.trust-track img:hover {
+  opacity: 0.9;
   filter: grayscale(0%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-track { animation: none; }
 }
 
 /* =============================================
@@ -1071,7 +1086,6 @@ textarea { resize: vertical; min-height: 120px; }
   .hero-actions .btn { text-align: center; justify-content: center; }
   .services-grid { grid-template-columns: 1fr; }
   .proyectos-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-logos-grid { grid-template-columns: repeat(4, 1fr); }
   .testimonios-grid { grid-template-columns: 1fr; }
   #casos .testimonios-grid { grid-template-columns: 1fr; }
   .contacto-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -1083,11 +1097,9 @@ textarea { resize: vertical; min-height: 120px; }
 
 @media (max-width: 640px) {
   .proyectos-grid { grid-template-columns: 1fr; }
-  .trust-logos-grid { grid-template-columns: repeat(3, 1fr); gap: 20px 24px; }
 }
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-logos-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* SCROLL MARGIN — compensa navbar fijo en anchor links */
