@@ -114,11 +114,11 @@ La URL de agradecimiento debe incluir `?enviado=1` para que `main.js` muestre el
 ### RF-01 — Navbar sticky
 Transparente sobre hero; fondo navy al superar ~60px de scroll; menú móvil full-screen.
 
-### RF-02 — Trust Bar
-Carrusel **infinito** de logos **monocromáticos** (SVG). Pausa o respeta `prefers-reduced-motion`.
-
-### RF-03 — Estadísticas animadas
+### RF-02 — Estadísticas animadas
 Contadores al entrar en viewport (ya implementados); fondo navy.
+
+### RF-03 — Trust Bar
+Carrusel **infinito** de logos **monocromáticos** (SVG). Pausa o respeta `prefers-reduced-motion`.
 
 ### RF-04 — Servicios
 Resumen en home con enlaces a páginas dedicadas en `/servicios/`.
