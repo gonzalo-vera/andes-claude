@@ -1,10 +1,7 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "$schema": "https://vercel.sh",
   "cleanUrls": true,
   "trailingSlash": false,
-  "errors": [
-    { "statusCode": 404, "redirect": "/404" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
