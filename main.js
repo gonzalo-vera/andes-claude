@@ -96,7 +96,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
-    document.querySelectorAll('.project-item').forEach(item => {
+    document.querySelectorAll('.proyecto-card').forEach(item => {
       const show = filter === 'all' || item.dataset.category === filter;
       item.classList.toggle('hidden', !show);
     });
