@@ -298,6 +298,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================= */
 .stats {
   background: var(--navy);
+  border-top: 3px solid var(--orange);
   padding: 64px 0;
 }
 .stats-grid {
@@ -871,27 +872,26 @@ textarea { resize: vertical; min-height: 120px; }
    TRUST BAR — carrusel infinito
    ============================================= */
 .trust-bar {
-  background: var(--white);
-  border-top: 1px solid rgba(26, 43, 74, 0.08);
-  border-bottom: 1px solid rgba(26, 43, 74, 0.08);
-  padding: 60px 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 80px 0;
   overflow: hidden;
 }
 .trust-intro {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 .trust-intro .section-tag { margin-bottom: 10px; display: inline-block; }
 .trust-intro h2 {
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 2.8vw, 1.6rem);
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
 }
 .trust-intro p {
-  font-size: 0.95rem;
-  color: var(--gray-500);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.70);
   max-width: 480px;
   margin: 0 auto;
 }
@@ -901,30 +901,34 @@ textarea { resize: vertical; min-height: 120px; }
 }
 .trust-carousel {
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 .trust-track {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 80px;
   width: max-content;
-  animation: trustScroll 28s linear infinite;
+  animation: trustScroll 40s linear infinite;
 }
 .trust-track:hover {
   animation-play-state: paused;
 }
 .trust-track img {
-  height: 44px;
+  height: 96px;
   width: auto;
   flex-shrink: 0;
-  filter: grayscale(100%);
-  opacity: 0.45;
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
 }
 .trust-track img:hover {
-  opacity: 0.9;
-  filter: grayscale(0%);
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .trust-track img { height: 68px; }
+  .trust-track { gap: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .trust-track { animation: none; }
