@@ -509,22 +509,14 @@
       <form
         class="contacto-form"
         id="contactForm"
-        action="https://formsubmit.co/info@andesconstruccion.com"
+        action="https://api.web3forms.com/submit"
         method="POST"
       >
-        <!-- FormSubmit config -->
-        <input type="hidden" name="_subject" value="Nueva solicitud de cotización — Andes Construcción" />
-        <input type="hidden" name="_next" value="" data-form-next />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input
-          type="text"
-          name="_gotcha"
-          tabindex="-1"
-          autocomplete="off"
-          style="position: absolute; left: -9999px; width: 1px; height: 1px"
-          aria-hidden="true"
-        />
+        <!-- Web3Forms config -->
+        <input type="hidden" name="access_key" value="7f3eae5c-4c9b-4472-a161-b707da4a79e6" />
+        <input type="hidden" name="subject" value="Nueva solicitud de cotización — Andes Construcción" />
+        <input type="hidden" name="redirect" value="" data-form-next />
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true" />
 
         <div class="form-group">
           <label for="nombre">Nombre completo</label>

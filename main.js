@@ -1,4 +1,4 @@
-// FormSubmit: apunta a gracias.html en el mismo origen
+// Web3Forms: apunta a gracias.html en el mismo origen
 (function initFormSubmitNext() {
   const nextInput = document.querySelector('#contactForm input[data-form-next]');
   if (!nextInput) return;
