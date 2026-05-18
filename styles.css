@@ -70,6 +70,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-width: 520px;
   margin: 0 auto;
 }
+.section-header.light h1,
 .section-header.light h2 { color: var(--white); }
 .section-header.light p  { color: rgba(255,255,255,0.65); }
 .section-tag {
@@ -989,18 +990,49 @@ textarea { resize: vertical; min-height: 120px; }
    PÁGINAS DE SERVICIO (plantilla multi-página)
    ============================================= */
 .servicio-intro {
-  padding: 128px 0 56px;
+  padding: 180px 0 96px;
+  min-height: 52vh;
+  position: relative;
+  background-color: var(--navy-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.servicio-intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-    165deg,
-    var(--navy-dark) 0%,
-    var(--navy) 50%,
-    var(--corp-blue) 100%
+    160deg,
+    rgba(15,27,48,0.93) 0%,
+    rgba(26,43,74,0.87) 55%,
+    rgba(22,77,127,0.78) 100%
   );
+  z-index: 0;
+}
+.servicio-intro .container {
+  position: relative;
+  z-index: 1;
 }
 .servicio-intro .section-header {
   text-align: left;
-  margin-bottom: 28px;
-  max-width: 720px;
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+.servicio-intro .section-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.servicio-intro .section-header p {
+  margin: 0;
+  max-width: none;
+  color: rgba(255,255,255,0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 .servicio-intro .hero-actions {
   margin-top: 8px;
@@ -1053,8 +1085,260 @@ textarea { resize: vertical; min-height: 120px; }
   background: var(--gray-100);
 }
 .servicio-related .services-grid {
-  margin-top: 8px;
+  margin-top: 40px;
   grid-template-columns: repeat(2, 1fr);
+}
+.servicio-related .service-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow);
+}
+
+/* --- Stats Bar --- */
+.service-stats {
+  background: var(--navy);
+  padding: 12px 0;
+}
+.service-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.service-stat {
+  text-align: center;
+  padding: 28px 24px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.service-stat:last-child { border-right: none; }
+.service-stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+.service-stat-label {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.52);
+  font-weight: 400;
+  line-height: 1.4;
+  display: block;
+}
+
+/* --- Feature Cards --- */
+.service-features {
+  background: #F8FAFC;
+  padding: 72px 0;
+}
+.service-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.service-feature-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-top: 4px solid var(--orange);
+  border-radius: 0 0 12px 12px;
+  padding: 28px 24px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.service-feature-card:hover {
+  box-shadow: 0 8px 28px rgba(15,23,42,0.12);
+  transform: translateY(-3px);
+}
+.service-feature-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(232,130,26,0.10);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.service-feature-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--orange);
+}
+.service-feature-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.service-feature-card p {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- Proceso Steps --- */
+.service-process {
+  padding: 72px 0;
+  background: var(--white);
+}
+.service-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+  position: relative;
+}
+.service-process-steps::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: calc(12.5% + 22px);
+  right: calc(12.5% + 22px);
+  height: 2px;
+  background: linear-gradient(to right, var(--orange), var(--corp-blue));
+  z-index: 0;
+}
+.service-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.service-step-num {
+  width: 44px;
+  height: 44px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 12px rgba(232,130,26,0.35);
+}
+.service-step h4 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.service-step p {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Personas "Para quién" --- */
+.service-audience {
+  background: #F8FAFC;
+  padding: 80px 0;
+}
+.service-personas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.service-persona-card {
+  background: var(--white);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: box-shadow 0.2s;
+}
+.service-persona-card:hover {
+  box-shadow: 0 6px 24px rgba(15,23,42,0.09);
+}
+.service-persona-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(15,27,48,0.06);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.service-persona-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--navy);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service-persona-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.persona-pain {
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.persona-solution {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--orange);
+  border-top: 1px solid #E2E8F0;
+  padding-top: 12px;
+  margin: 0;
+}
+
+/* --- CTA de cierre --- */
+.service-cta-section {
+  background: var(--navy);
+  padding: 72px 0;
+  text-align: center;
+}
+.service-cta-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--white);
+  max-width: 620px;
+  margin: 0 auto 16px;
+}
+.service-cta-section p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 500px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+.service-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Responsive service components --- */
+@media (max-width: 768px) {
+  .service-features-grid { grid-template-columns: 1fr; }
+  .service-process-steps { grid-template-columns: repeat(2, 1fr); }
+  .service-process-steps::before { display: none; }
+  .service-personas-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .service-stat { padding: 20px 10px; }
+  .service-stat-number { font-size: 1.5rem; }
+  .service-stat-label { font-size: 0.75rem; }
+}
+@media (max-width: 480px) {
+  .service-process-steps { grid-template-columns: 1fr; }
 }
 
 /* =============================================
