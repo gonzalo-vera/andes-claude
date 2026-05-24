@@ -39,7 +39,6 @@ def get_campaigns(client, days=30):
                campaign.bidding_strategy_type, campaign.advertising_channel_type,
                metrics.impressions, metrics.clicks, metrics.conversions,
                metrics.cost_micros, metrics.ctr, metrics.average_cpc,
-               metrics.conversion_rate,
                metrics.search_impression_share,
                metrics.search_budget_lost_impression_share
         FROM campaign
@@ -60,7 +59,7 @@ def get_campaigns(client, days=30):
             "cost_clp":        r.metrics.cost_micros / 1_000_000,
             "ctr_pct":         r.metrics.ctr * 100,
             "cpc_clp":         r.metrics.average_cpc / 1_000_000,
-            "cvr_pct":         r.metrics.conversion_rate * 100,
+            "cvr_pct":         (r.metrics.conversions / r.metrics.clicks * 100) if r.metrics.clicks > 0 else 0.0,
             "impression_share":    r.metrics.search_impression_share,
             "lost_budget_pct": r.metrics.search_budget_lost_impression_share,
         })
