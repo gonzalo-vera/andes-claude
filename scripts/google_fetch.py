@@ -31,7 +31,6 @@ def run_query(client, customer_id, gaql):
     request = client.get_type("SearchGoogleAdsRequest")
     request.customer_id = str(customer_id)
     request.query = gaql
-    request.page_size = 1000
     return list(service.search(request=request))
 
 def get_campaigns(client, days=30):
