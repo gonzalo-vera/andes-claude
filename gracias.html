@@ -26,6 +26,17 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-0M0W1DVSKK');
+    // Conversiones de formulario — solo se disparan en /gracias (post-envío exitoso)
+    gtag('event', 'generate_lead', {          // evento estándar GA4 recomendado
+      event_category: 'formulario',
+      event_label: 'cotizacion_enviada',
+      value: 1
+    });
+    gtag('event', 'digitals_formulario', {   // nombre exacto del import GA4 → Google Ads
+      event_category: 'formulario',
+      event_label: 'cotizacion_enviada',
+      value: 1
+    });
   </script>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
