@@ -2,6 +2,17 @@
   "$schema": "https://vercel.sh",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/portfolio-collections/:path*", "destination": "/", "permanent": true },
+    { "source": "/contacto", "destination": "/#contacto", "permanent": true },
+    { "source": "/nosotros", "destination": "/#nosotros", "permanent": true },
+    { "source": "/sobre-nosotros", "destination": "/#nosotros", "permanent": true },
+    { "source": "/servicios", "destination": "/#servicios", "permanent": true },
+    { "source": "/proyectos", "destination": "/#proyectos", "permanent": true },
+    { "source": "/blog", "destination": "/", "permanent": true },
+    { "source": "/inicio", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
