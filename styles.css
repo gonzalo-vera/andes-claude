@@ -870,6 +870,82 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 /* =============================================
+   SERVICE DEFINITION — párrafo intro extractable
+   ============================================= */
+.service-definition {
+  padding: 40px 0 0;
+}
+.service-lead {
+  font-size: 1.05rem;
+  color: var(--gray-700);
+  line-height: 1.75;
+  max-width: 820px;
+  border-left: 3px solid var(--orange);
+  padding-left: 20px;
+}
+.service-lead a {
+  color: var(--orange);
+  font-weight: 600;
+}
+.service-lead a:hover { color: var(--orange-dark); }
+
+/* =============================================
+   SERVICE FAQ
+   ============================================= */
+.service-faq { background: var(--gray-100); }
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--orange);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item summary h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
+.faq-item > p {
+  padding: 0 24px 20px;
+  color: var(--gray-700);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .service-lead { font-size: 0.95rem; }
+  .faq-item summary { padding: 16px 18px; }
+  .faq-item > p { padding: 0 18px 16px; }
+}
+
+/* =============================================
    TRUST BAR — carrusel infinito
    ============================================= */
 .trust-bar {
