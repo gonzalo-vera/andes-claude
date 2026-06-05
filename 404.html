@@ -6,6 +6,20 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <title>Página no encontrada — Andes Construcción</title>
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l !== "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T98FMHL");
+  </script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0M0W1DVSKK"></script>
   <script>
@@ -27,34 +41,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .error-hero {
+    .error-page {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .error-hero {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--corp-blue) 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      padding: 120px 24px 72px;
       text-align: center;
-      padding: 40px 24px;
     }
-    .error-box { max-width: 520px; color: var(--white); }
+    .error-content {
+      max-width: 620px;
+      color: var(--white);
+    }
+    .error-isotipo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: rgba(232, 130, 26, 0.12);
+      border-radius: 16px;
+      margin-bottom: 28px;
+    }
     .error-code {
       font-family: var(--font-heading);
-      font-size: clamp(5rem, 20vw, 9rem);
+      font-size: clamp(5.5rem, 22vw, 9rem);
       font-weight: 800;
       color: var(--orange);
       line-height: 1;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+      letter-spacing: -4px;
     }
-    .error-box h1 {
+    .error-content h1 {
       font-family: var(--font-heading);
       font-size: clamp(1.4rem, 4vw, 2rem);
       font-weight: 700;
       margin-bottom: 16px;
+      color: var(--white);
     }
-    .error-box p {
+    .error-content p {
       font-size: 1.05rem;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.75;
       margin-bottom: 40px;
     }
     .error-actions {
@@ -62,20 +96,149 @@
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .error-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, 0.38);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .error-divider::before,
+    .error-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .error-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .error-service-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .error-service-card:hover {
+      border-color: var(--orange);
+      background: rgba(232, 130, 26, 0.08);
+      color: var(--white);
+    }
+    .error-service-card svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--orange);
+    }
+    @media (max-width: 480px) {
+      .error-services { grid-template-columns: 1fr; }
+      .error-hero { padding-top: 100px; }
     }
   </style>
 </head>
 <body>
-  <section class="error-hero">
-    <div class="error-box">
-      <div class="error-code">404</div>
-      <h1>Esta página no existe</h1>
-      <p>La URL que buscas no está disponible. Puede que haya sido movida o que el enlace tenga un error.</p>
-      <div class="error-actions">
-        <a href="/" class="btn btn-primary">Volver al inicio</a>
-        <a href="/#contacto" class="btn btn-ghost">Contactar</a>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T98FMHL" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe>
+  </noscript>
+
+  <div class="error-page">
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="/" class="logo">
+          <span class="logo-andes">ANDES</span>
+          <span class="logo-construccion">CONSTRUCCIÓN</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#servicios">Servicios</a></li>
+          <li><a href="/#proyectos">Proyectos</a></li>
+          <li><a href="/#nosotros">Nosotros</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+        </ul>
+        <a href="/#contacto" class="btn btn-cta">Solicitar Cotización</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-  </section>
+    </nav>
+
+    <!-- ERROR HERO -->
+    <section class="error-hero">
+      <div class="error-content">
+
+        <!-- Isotipo montaña/A de la marca -->
+        <div class="error-isotipo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="36" height="36">
+            <path d="M16 7L27 25H5L16 7Z" fill="none" stroke="#E8821A" stroke-width="2.4" stroke-linejoin="round"/>
+            <line x1="10.5" y1="19.5" x2="21.5" y2="19.5" stroke="#E8821A" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="error-code">404</div>
+        <h1>Esta página no existe</h1>
+        <p>La URL que buscas no está disponible. Puede que haya sido movida o que el enlace tenga un error.<br />Encuentra lo que necesitas en las páginas principales.</p>
+
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary">← Volver al inicio</a>
+          <a href="/#contacto" class="btn btn-ghost">Contactar</a>
+        </div>
+
+        <div class="error-divider">O ir directo a un servicio</div>
+
+        <div class="error-services">
+          <a href="/servicios/impermeabilizacion.html" class="error-service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.24.29-2.41.79-3.45L16.55 19.21C15.41 19.71 14.24 20 13 20h-1zm6.21-2.55L7.45 5.79C8.59 5.29 9.76 5 11 5h1c4.41 0 8 3.59 8 8 0 1.24-.29 2.41-.79 3.45z"/>
+            </svg>
+            Impermeabilización
+          </a>
+          <a href="/servicios/construccion.html" class="error-service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Construcción
+          </a>
+          <a href="/servicios/remodelacion.html" class="error-service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+            Remodelación
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const isOpen = navLinks?.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Menú');
+    });
+  </script>
 </body>
 </html>

@@ -1,8 +1,14 @@
-// Web3Forms: apunta a gracias.html en el mismo origen
+// Web3Forms: apunta a gracias.html en el mismo origen + auto-reply con email del usuario
 (function initFormSubmitNext() {
   const nextInput = document.querySelector('#contactForm input[data-form-next]');
   if (!nextInput) return;
   nextInput.value = `${window.location.origin}/gracias`;
+
+  const emailInput = document.querySelector('#contactForm input[name="email"]');
+  const replytoInput = document.querySelector('#contactForm input[data-autoreply-email]');
+  if (emailInput && replytoInput) {
+    emailInput.addEventListener('input', () => { replytoInput.value = emailInput.value; });
+  }
 })();
 
 // Navbar scroll

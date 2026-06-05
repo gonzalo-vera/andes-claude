@@ -31,12 +31,60 @@
       "email": "info@andesconstruccion.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Santiago",
+        "streetAddress": "Camino del Escribano 12924",
+        "addressLocality": "Lo Barnechea",
         "addressRegion": "Región Metropolitana",
         "addressCountry": "CL"
       },
       "areaServed": { "@type": "Country", "name": "Chile" },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3"
+      },
       "description": "Impermeabilización, construcción y remodelación con foco B2B, garantía y documentación de obra en Chile."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Reseñas de clientes — Andes Construcción",
+      "itemListElement": [
+        {
+          "@type": "Review",
+          "position": 1,
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Marcos Poblete Ortiz" },
+          "reviewBody": "Cada uno de los sectores asignados fueron probados y recibidos a plena conformidad por nuestro departamento de calidad. La empresa Andes Construcción ha cumplido con las calidades y plazos establecidos en nuestro contrato.",
+          "itemReviewed": { "@type": "LocalBusiness", "name": "Andes Construcción" }
+        },
+        {
+          "@type": "Review",
+          "position": 2,
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Magdalena Escobar Raineri" },
+          "reviewBody": "Confirmo haber contratado en reiteradas oportunidades a Andes Construcción. Todos los trabajos fueron ejecutados en tiempo y forma, conforme lo convenido, siendo absolutamente satisfactorios los resultados en el tiempo.",
+          "itemReviewed": { "@type": "LocalBusiness", "name": "Andes Construcción" }
+        },
+        {
+          "@type": "Review",
+          "position": 3,
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Andrea Busquets Kretschmer" },
+          "reviewBody": "Han demostrado ser una empresa seria, responsable, eficiente y altamente profesional. Las soluciones ejecutadas han resultado duraderas y han respondido plenamente a nuestras expectativas.",
+          "itemReviewed": { "@type": "LocalBusiness", "name": "Andes Construcción" }
+        }
+      ]
     }
   </script>
   <!-- Google Tag Manager -->
@@ -516,11 +564,16 @@
         <input type="hidden" name="access_key" value="7f3eae5c-4c9b-4472-a161-b707da4a79e6" />
         <input type="hidden" name="subject" value="Nueva solicitud de cotización — Andes Construcción" />
         <input type="hidden" name="redirect" value="" data-form-next />
+        <!-- Auto-reply al cliente -->
+        <input type="hidden" name="from_name" value="Andes Construcción" />
+        <input type="hidden" name="replyto" value="" data-autoreply-email />
+        <input type="hidden" name="autoresponse_subject" value="Recibimos tu solicitud — Andes Construcción" />
+        <input type="hidden" name="autoresponse" value="Gracias por contactar a Andes Construcción.&#10;&#10;Su solicitud fue recibida correctamente. Nuestro equipo técnico la revisará y se pondrá en contacto dentro de las próximas 24 horas hábiles para coordinar una visita técnica sin costo.&#10;&#10;Para consultas urgentes, puede escribirnos directamente a info@andesconstruccion.com o llamarnos al +56 9 9826 9135.&#10;&#10;Equipo Andes Construcción&#10;www.andesconstruccion.com" />
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true" />
 
         <div class="form-group">
           <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+          <input type="text" id="nombre" name="name" placeholder="Juan Pérez" required />
         </div>
         <div class="form-group">
           <label for="empresa">Empresa / Razón social</label>
