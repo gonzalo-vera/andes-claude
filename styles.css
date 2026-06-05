@@ -918,7 +918,7 @@ textarea { resize: vertical; min-height: 120px; }
 .trust-track img {
   display: block;
   width: auto;
-  height: 120px;
+  height: 160px;
   object-fit: contain;
   flex-shrink: 0;
   filter: brightness(0) invert(1);
@@ -929,7 +929,7 @@ textarea { resize: vertical; min-height: 120px; }
   opacity: 1;
 }
 @media (max-width: 768px) {
-  .trust-track img { height: 80px; }
+  .trust-track img { height: 110px; }
   .trust-track { gap: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
