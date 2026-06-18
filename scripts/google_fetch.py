@@ -242,3 +242,72 @@ def get_ads(client, days=30):
             "cost_clp":     r.metrics.cost_micros / 1_000_000,
         })
     return result
+
+def get_ad_groups(client):
+    """Returns active ad groups with campaign info."""
+    rows = run_query(client, CUSTOMER_ID, """
+        SELECT ad_group.id, ad_group.name, ad_group.status,
+               ad_group.cpc_bid_micros,
+               campaign.id, campaign.name, campaign.status
+        FROM ad_group
+        WHERE ad_group.status != 'REMOVED'
+          AND campaign.status != 'REMOVED'
+    """)
+    result = []
+    for r in rows:
+        result.append({
+            "id":            r.ad_group.id,
+            "name":          r.ad_group.name,
+            "status":        r.ad_group.status.name,
+            "cpc_clp":       r.ad_group.cpc_bid_micros / 1_000_000,
+            "campaign_id":   r.campaign.id,
+            "campaign_name": r.campaign.name,
+        })
+    return result
+
+def get_rsa_performance(client, days=14):
+    """Returns RSA ads with actual headline/description texts and per-ad performance."""
+    rows = run_query(client, CUSTOMER_ID, f"""
+        SELECT ad_group_ad.resource_name,
+               ad_group_ad.ad.id,
+               ad_group_ad.ad.responsive_search_ad.headlines,
+               ad_group_ad.ad.responsive_search_ad.descriptions,
+               ad_group_ad.ad_strength, ad_group_ad.status,
+               campaign.id, campaign.name,
+               ad_group.id, ad_group.name,
+               metrics.impressions, metrics.clicks, metrics.conversions,
+               metrics.cost_micros, metrics.ctr,
+               metrics.conversions_from_interactions_rate
+        FROM ad_group_ad
+        WHERE segments.date DURING LAST_{days}_DAYS
+          AND ad_group_ad.status != 'REMOVED'
+          AND campaign.status != 'REMOVED'
+          AND ad_group_ad.ad.type = RESPONSIVE_SEARCH_AD
+    """)
+    result = []
+    for r in rows:
+        headlines    = [h.text for h in r.ad_group_ad.ad.responsive_search_ad.headlines]
+        descriptions = [d.text for d in r.ad_group_ad.ad.responsive_search_ad.descriptions]
+        clicks      = r.metrics.clicks
+        conversions = r.metrics.conversions
+        cost_clp    = r.metrics.cost_micros / 1_000_000
+        result.append({
+            "resource_name":  r.ad_group_ad.resource_name,
+            "ad_id":          r.ad_group_ad.ad.id,
+            "ad_group_id":    r.ad_group.id,
+            "ad_group_name":  r.ad_group.name,
+            "campaign_id":    r.campaign.id,
+            "campaign_name":  r.campaign.name,
+            "status":         r.ad_group_ad.status.name,
+            "strength":       r.ad_group_ad.ad_strength.name,
+            "headlines":      headlines,
+            "descriptions":   descriptions,
+            "impressions":    r.metrics.impressions,
+            "clicks":         clicks,
+            "conversions":    conversions,
+            "cost_clp":       cost_clp,
+            "ctr_pct":        r.metrics.ctr * 100,
+            "cvr_pct":        (conversions / clicks * 100) if clicks > 0 else 0.0,
+            "cpa_clp":        (cost_clp / conversions) if conversions > 0 else None,
+        })
+    return result

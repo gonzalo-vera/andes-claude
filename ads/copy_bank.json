@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "brand": "Andes Construcción",
+    "max_headline_chars": 25,
+    "max_description_chars": 90,
+    "last_review": "2026-06-18",
+    "notes": "Todos los textos verificados por usuario. No publicar variantes sin aprobación."
+  },
+  "headlines": [
+    {"id": "h001", "text": "+20 Anos de Experiencia",    "pillar": "authority", "char_count": 23},
+    {"id": "h002", "text": "+500 Proyectos Exitosos",    "pillar": "authority", "char_count": 23},
+    {"id": "h003", "text": "+1M m2 Impermeabilizados",   "pillar": "authority", "char_count": 24},
+    {"id": "h004", "text": "Empresa con Trayectoria",    "pillar": "authority", "char_count": 23},
+    {"id": "h005", "text": "Proyectos Garantizados",     "pillar": "authority", "char_count": 22},
+    {"id": "h006", "text": "Cotizacion sin Costo",       "pillar": "offer",     "char_count": 20},
+    {"id": "h007", "text": "Respuesta en 24 Horas",      "pillar": "offer",     "char_count": 21},
+    {"id": "h008", "text": "Diagnostico Gratuito",       "pillar": "offer",     "char_count": 20},
+    {"id": "h009", "text": "Garantia por Escrito",       "pillar": "offer",     "char_count": 20},
+    {"id": "h010", "text": "Presupuesto sin Costo",      "pillar": "offer",     "char_count": 21},
+    {"id": "h011", "text": "Servicio para Empresas",     "pillar": "b2b",       "char_count": 22},
+    {"id": "h012", "text": "Sin Paralizar Edificio",     "pillar": "b2b",       "char_count": 22},
+    {"id": "h013", "text": "Impermeabilizacion B2B",     "pillar": "b2b",       "char_count": 22},
+    {"id": "h014", "text": "Para Administradores",       "pillar": "b2b",       "char_count": 20},
+    {"id": "h015", "text": "Acta para Directorio",       "pillar": "b2b",       "char_count": 21},
+    {"id": "h016", "text": "Impermeabilizacion",         "pillar": "service",   "char_count": 18},
+    {"id": "h017", "text": "Impermeabilizar Techos",     "pillar": "service",   "char_count": 22},
+    {"id": "h018", "text": "Terrazas sin Filtraciones",  "pillar": "service",   "char_count": 25},
+    {"id": "h019", "text": "Sellado de Filtraciones",    "pillar": "service",   "char_count": 23},
+    {"id": "h020", "text": "Reparamos Filtraciones",     "pillar": "service",   "char_count": 22},
+    {"id": "h021", "text": "Expertos en Techos",         "pillar": "service",   "char_count": 18},
+    {"id": "h022", "text": "Construccion B2B Chile",     "pillar": "service",   "char_count": 22},
+    {"id": "h023", "text": "Remodelacion Empresas",      "pillar": "service",   "char_count": 21},
+    {"id": "h024", "text": "Antes de las Lluvias",       "pillar": "urgency",   "char_count": 20},
+    {"id": "h025", "text": "Temporada de Lluvias",       "pillar": "urgency",   "char_count": 20},
+    {"id": "h026", "text": "Proteja su Edificio",        "pillar": "urgency",   "char_count": 19},
+    {"id": "h027", "text": "Filtraciones? Llamenos",     "pillar": "urgency",   "char_count": 22},
+    {"id": "h028", "text": "Solucion ante Filtracion",   "pillar": "urgency",   "char_count": 24}
+  ],
+  "descriptions": [
+    {
+      "id": "d001",
+      "text": "Empresa ocupada? Impermeabilizamos sin paralizar suministros ni desalojar residentes.",
+      "pillar": "b2b",
+      "char_count": 85
+    },
+    {
+      "id": "d002",
+      "text": "Mas de 500 proyectos ejecutados. Cotizacion sin costo. Respondemos en 24 horas.",
+      "pillar": "authority",
+      "char_count": 80
+    },
+    {
+      "id": "d003",
+      "text": "Trabajamos con edificios en operacion. Diagnostico tecnico gratuito incluido.",
+      "pillar": "b2b",
+      "char_count": 76
+    },
+    {
+      "id": "d004",
+      "text": "Entregamos garantia por escrito con acta para su directorio o comite.",
+      "pillar": "b2b",
+      "char_count": 69
+    },
+    {
+      "id": "d005",
+      "text": "Impermeabilizacion de techos, terrazas y estacionamientos para edificios.",
+      "pillar": "service",
+      "char_count": 73
+    },
+    {
+      "id": "d006",
+      "text": "Filtraciones en su edificio? Cotice gratis. Respuesta garantizada en 24h.",
+      "pillar": "urgency",
+      "char_count": 73
+    }
+  ],
+  "brand_headlines": [
+    {"id": "bh001", "text": "Andes Construccion",         "pillar": "brand", "char_count": 18},
+    {"id": "bh002", "text": "Sitio Oficial Andes",        "pillar": "brand", "char_count": 19},
+    {"id": "bh003", "text": "+20 Anos de Experiencia",    "pillar": "brand", "char_count": 23},
+    {"id": "bh004", "text": "+500 Proyectos Exitosos",    "pillar": "brand", "char_count": 23},
+    {"id": "bh005", "text": "Cotizacion sin Costo",       "pillar": "brand", "char_count": 20},
+    {"id": "bh006", "text": "Impermeabilizacion",         "pillar": "brand", "char_count": 18},
+    {"id": "bh007", "text": "Empresa en Chile",           "pillar": "brand", "char_count": 15},
+    {"id": "bh008", "text": "Servicio para Empresas",     "pillar": "brand", "char_count": 22},
+    {"id": "bh009", "text": "Respuesta en 24 Horas",      "pillar": "brand", "char_count": 21},
+    {"id": "bh010", "text": "Garantia por Escrito",       "pillar": "brand", "char_count": 20}
+  ],
+  "brand_descriptions": [
+    {
+      "id": "bd001",
+      "text": "Empresa de construccion e impermeabilizacion con 20 anos en Chile. Contactenos.",
+      "pillar": "brand",
+      "char_count": 79
+    },
+    {
+      "id": "bd002",
+      "text": "Cotizacion sin costo. Diagnostico tecnico gratuito. Respondemos en 24 horas.",
+      "pillar": "brand",
+      "char_count": 77
+    }
+  ],
+  "rsa_profiles": {
+    "authority_b2b": {
+      "description": "RSA #2 — ángulo authority + B2B. Úsalo cuando RSA #1 cubre service/urgency.",
+      "headline_pillars": ["authority", "b2b", "offer"],
+      "description_pillars": ["authority", "b2b"],
+      "min_headlines": 8,
+      "min_descriptions": 3
+    },
+    "urgency_service": {
+      "description": "RSA #1 — ángulo urgencia + servicio. Ángulo de entrada.",
+      "headline_pillars": ["service", "urgency", "offer"],
+      "description_pillars": ["service", "urgency"],
+      "min_headlines": 8,
+      "min_descriptions": 3
+    }
+  }
+}
