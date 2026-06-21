@@ -20,17 +20,23 @@ window.addEventListener('scroll', () => {
 // Mobile menu — toggle hamburger ↔ X
 const toggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
+function closeMobileNav() {
+  navLinks?.classList.remove('open');
+  toggle?.classList.remove('open');
+  toggle?.setAttribute('aria-label', 'Menú');
+  document.body.classList.remove('nav-open');
+}
 toggle?.addEventListener('click', () => {
   const isOpen = navLinks?.classList.toggle('open');
   toggle.classList.toggle('open', isOpen);
   toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Menú');
+  document.body.classList.toggle('nav-open', isOpen);
 });
 navLinks?.querySelectorAll('a').forEach((a) => {
-  a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    toggle?.classList.remove('open');
-    toggle?.setAttribute('aria-label', 'Menú');
-  });
+  a.addEventListener('click', closeMobileNav);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navLinks?.classList.contains('open')) closeMobileNav();
 });
 
 // GTM helpers

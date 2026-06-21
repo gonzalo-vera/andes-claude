@@ -227,18 +227,6 @@
     </section>
   </div>
 
-  <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    });
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle?.addEventListener('click', () => {
-      const isOpen = navLinks?.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-      toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Menú');
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -58,7 +58,7 @@
       justify-content: center;
       background: linear-gradient(135deg, var(--navy) 0%, var(--corp-blue) 100%);
       text-align: center;
-      padding: 40px 24px;
+      padding: 120px 24px 40px;
     }
     .gracias-box {
       max-width: 560px;
@@ -113,6 +113,25 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T98FMHL" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe>
   </noscript>
 
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-andes">ANDES</span>
+        <span class="logo-construccion">CONSTRUCCIÓN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#nosotros">Nosotros</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
   <section class="gracias-hero">
     <div class="gracias-box">
       <div class="gracias-icon">
@@ -128,8 +147,8 @@
         Respuesta en menos de 24 horas
       </div>
       <div class="gracias-actions">
-        <a href="index.html#proyectos" class="btn btn-primary">Ver proyectos</a>
-        <a href="index.html" class="btn btn-ghost">Volver al inicio</a>
+        <a href="/#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="/" class="btn btn-ghost">Volver al inicio</a>
       </div>
     </div>
   </section>
