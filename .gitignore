@@ -1,3 +1,8 @@
 node_modules/
 __pycache__/
 *.pyc
+
+# Credenciales y archivos con secretos: nunca versionar
+.env*
+scripts/refresh_oauth_token.py
+*-sa.json
