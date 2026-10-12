@@ -1,0 +1,19 @@
+# Archivos internos: no forman parte del sitio y no deben servirse públicamente
+.claude
+.agents
+ads
+apps-script
+docs
+scripts
+tests
+graphify-out
+google_export
+google_export_baseline
+*.md
+*.py
+*.csv
+*.zip
+*.pdf
+*.png
+!assets/**
+google-audit-results*.json
